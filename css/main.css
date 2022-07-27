@@ -14,4 +14,31 @@ body {
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+/*******************
+HEADER
+**********/
+.main-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu {
+  display: none;
+}
+#menu:checked + .nav-bar {
+  display: block;
+}
+#menu:checked ~ .search-bar .menu-toggle__laber {
+  background-color: yellow;
+}
+
+/* NAV BAR*/
+.nav-bar {
+  background-color: mediumaquamarine;
+}
+.nav-bar__nav-list {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */

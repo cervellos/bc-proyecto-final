@@ -1,0 +1,38 @@
+/*******************
+HEADER
+**********/
+.main-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu {
+  display: none;
+
+  &:checked + .nav-bar {
+    display: block;
+  }
+  &:checked ~ .search-bar .menu-toggle__laber {
+    background-color: yellow;
+  }
+}
+
+/* NAV BAR*/
+
+.nav-bar {
+  background-color: mediumaquamarine;
+  &__nav-list {
+    display: flex;
+    justify-content: center;
+
+    @media screen (max-width: 768px) {
+      .navbar__nav-list {
+        flex-direction: column;
+      }
+    }
+  }
+  &__nav-item {
+    text-align: center;
+    background-color: pink;
+  }
+}
