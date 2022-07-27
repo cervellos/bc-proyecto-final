@@ -41,4 +41,25 @@ HEADER
 .nav-bar__nav-list {
   display: flex;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .nav-bar__nav-list .navbar__nav-list {
+    flex-direction: column;
+  }
+}
+.nav-bar__nav-item {
+  text-align: center;
+  background-color: pink;
+}
+.nav-bar__nav-link {
+  display: block;
+  background-color: purple;
+  color: aliceblue;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
