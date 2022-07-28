@@ -4,6 +4,11 @@ HEADER
 .main-header {
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 #menu {
@@ -80,5 +85,39 @@ HEADER
   &__carrito-container {
     flex: 0 0 3em;
     background-color: goldenrod;
+  }
+}
+
+/* MENU TOOGLe*/
+
+.menu-toggle {
+  display: none;
+  background-color: red;
+  flex: 0 0 3em;
+  position: relative;
+  cursor: pointer;
+  &__label {
+    display: block;
+    background-color: black;
+    height: 100%;
+  }
+  &__top-bread,
+  &__meat,
+  &__bottonm-bread {
+    display: block;
+    background-color: #333;
+    height: 0.2em;
+    position: absolute;
+    left: 0.5em;
+    right: 0.5em;
+  }
+  &__top-bread {
+    top: 0.8em;
+  }
+  &__meat {
+    border: 0.5em #333 solid;
+  }
+  &__bottonm-bread {
+    bottom: 0.25em;
   }
 }
