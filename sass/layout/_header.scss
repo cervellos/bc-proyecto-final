@@ -3,7 +3,7 @@ HEADER
 **********/
 .main-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   background-image: -moz-linear-gradient(
     $color--secunda-gold,
     $color--tercear-gold,
@@ -19,9 +19,22 @@ HEADER
 
   width: 100%;
   position: fixed;
-  @media (max-width: 768px) {
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
     & {
       flex-direction: column-reverse;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) {
+    & {
+      flex-direction: column;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    & {
+      flex-direction: column;
     }
   }
 }
