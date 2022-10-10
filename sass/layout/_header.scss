@@ -5,17 +5,17 @@ HEADER
   display: flex;
   flex-direction: column-reverse;
   background-image: -moz-linear-gradient(
-    $color--secunda-gold,
-    $color--tercear-gold,
-    $color--cuartar-gold,
-    $color--quintar-gold,
-    $color--primary-white,
-    $color--quintar-gold,
-    $color--cuartar-gold,
-    $color--tercear-gold,
-    $color--secunda-gold
+    --color--secundy-gold,
+    --color--tercear-gold,
+    --color--cuartar-gold,
+    --color--quintar-gold,
+    --color--primary-white,
+    --color--quintar-gold,
+    --color--cuartar-gold,
+    --color--tercear-gold,
+    --color--secunda-gold
   );
-  color: $color--primary-white;
+  color: --color--primary-white;
 
   width: 100%;
   position: fixed;
@@ -141,16 +141,16 @@ HEADER
   }
   &__form-search {
     background-image: -moz-linear-gradient(
-      $color--secundy-blue,
-      $color--primary-blue
+      --color--secundy-blue,
+      --color--primary-blue
     );
     border-radius: 5px;
     width: 70%;
   }
   &__form-submit {
     background-image: -moz-linear-gradient(
-      $color--secundy-blue,
-      $color--primary-blue
+      --color--secundy-blue,
+      --color--primary-blue
     );
     border-radius: 5px;
   }
@@ -158,8 +158,8 @@ HEADER
     flex: 0 0 3em;
     opacity: 1;
     background-image: -moz-linear-gradient(
-      $color--secundy-blue,
-      $color--primary-blue
+      --color--secundy-blue,
+      --color--primary-blue
     );
   }
 }
