@@ -13,22 +13,43 @@ body {
     var(--color--tercear-gold),
     var(--color--quintar-gold),
     var(--color--primary-white),
+    var(--color--primary-white),
+    var(--color--tercear-gold),
+    var(--color--quintar-gold),
+    var(--color--tercear-red),
+    var(--color--primary-blue),
+    var(--color--primary-blue),
+    var(--color--primary-black),
+    black,
+    var(--color--primary-black),
+    var(--color--primary-black),
+    var(--color--primary-blue),
+    var(--color--primary-blue),
+    var(--color--tercear-red),
+    var(--color--tercear-gold),
+    var(--color--quintar-gold),
     var(--color--primary-white)
   );
 
   background-size: 600% 600%;
 
-  animation: trasiciones 26s ease infinite;
+  animation: trasiciones 5s infinite normal;
 }
 
 @keyframes trasiciones {
   0% {
     background-position: 84% 0%;
   }
+  100% {
+    background-position: 17% 100%;
+  }
+  /*100% {
+    background-position: 84% 0%;
+  }
   50% {
     background-position: 17% 100%;
   }
-  100% {
+  0% {
     background-position: 84% 0%;
-  }
+  }*/
 }
