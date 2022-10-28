@@ -13,11 +13,11 @@ class Http {
   }
 
   /* POST */
-  async post(url, dato) {
+  async post(url, data) {
     try {
       const respuesta = await fetch(url, {
         method: "post",
-        body: JSON.stringify(dato),
+        body: JSON.stringify(data),
         headers: { "content-type": "application/json" },
       });
 
@@ -30,11 +30,11 @@ class Http {
   }
 
   /* PUT */
-  async put(url, id, dato) {
+  async put(url, id, data) {
     try {
       const respuesta = await fetch(url + id, {
         method: "put",
-        body: JSON.stringify(dato),
+        body: JSON.stringify(data),
         headers: { "content-type": "application/json" },
       });
 
