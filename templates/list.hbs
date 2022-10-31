@@ -1,43 +1,43 @@
-{{#if productos.length}}
+{{#if products.length}}
   <table>
     <tr>
-      <th>Nombre</th>
-      <th>Precio</th>
-      <th>Stock</th>
-      <th>Categoría</th>
-      <th>Detalles</th>
-      <th>Foto</th>
-      <th>Envío</th>
+      <th>name</th>
+      <th>price</th>
+      <th>stock</th>
+      <th>category</th>
+      <th>details</th>
+      <th>photo</th>
+      <th>send</th>
     </tr>
-    {{#each productos}}
+    {{#each products}}
       <tr>
-        <td>{{nombre}}</td>
-        <td>{{precio}}</td>
+        <td>{{name}}</td>
+        <td>{{price}}</td>
         <td>{{stock}}</td>
-        <td>{{categoria}}</td>
-        <td>{{detalles}}</td>
+        <td>{{category}}</td>
+        <td>{{details}}</td>
         <td>
           <img
-            src="{{foto}}"
-            alt="{{nombre}}"
+            src="{{photo}}"
+            alt="{{name}}"
             style="display:block; margin: 0 auto;"
             width="50"
           />
         </td>
-        {{#if envio}}
-          <td>Si</td>
+        {{#if }}
+          <td>Yes</td>
         {{else}}
           <td>No</td>
         {{/if}}
         <td>
-          {{#if ../validos}}
-            <button onclick="ActualizarProducto({{id}})">Actualizar</button>
+          {{#if ../valids}}
+            <button onclick="updateProducts({{id}})">Update</button>
           {{else}}
-            <button disabled onclick="ActualizarProducto({{id}})">Actualizar</button>
+            <button disabled onclick="updateProducts({{id}})">Update</button>
           {{/if}}
         </td>
         <td>
-            <button onclick="borrarProducto({{id}})">Borrar</button>
+            <button onclick="deleteProduct({{id}})">delete</button>
         </td>
       </tr>
     {{/each}}

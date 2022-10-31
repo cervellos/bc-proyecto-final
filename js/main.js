@@ -24,8 +24,8 @@ class Main {
   }
   //arranca el respectivo JS de su archivo html
   initJS(id) {
-    if (id === "alta") {
-      initAlta();
+    if (id === "list") {
+      initList();
     } else if (id === "init") {
       initInit();
     } else if (id === "we") {
@@ -42,7 +42,7 @@ class Main {
 
     // Carga del código de la vista (HTML) de la platilla
     let main = document.querySelector("main");
-    main.innerHTML = plantilla;
+    main.innerHTML = template;
 
     // Carga dle código script (JS) de la plantilla
     this.initJS(id);
@@ -50,7 +50,7 @@ class Main {
 
   async ChargerTemplates() {
     // Carga inicial de la vista deteminada por la url visitada
-    let id = location.hash.slice(1) || "inicio"; // #inicio => slice(1) => inicio
+    let id = location.hash.slice(1) || "init"; // #inicio => slice(1) => inicio
     this.markLink(id);
     await this.ChargerTemplate(id);
 
@@ -71,7 +71,7 @@ class Main {
     window.addEventListener("hashchange", async () => {
       // console.log('Cambió la URL')
 
-      let id = location.hash.slice(1) || "inicio";
+      let id = location.hash.slice(1) || "init";
       this.marcarLink(id);
       await this.ChargerTemplate(id);
     });

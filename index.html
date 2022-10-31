@@ -15,16 +15,16 @@
         <nav class="nav-bar">
           <ul class="nav-bar__nav-list">
             <li class="nav-bar__nav-item">
-              <a href="#" class="nav-bar__nav-link"> Inicio </a>
+              <a href="" id="init" class="nav-bar__nav-link"> Inicio </a>
             </li>
             <li class="nav-bar__nav-item">
-              <a href="#" class="nav-bar__nav-link"> Alta </a>
+              <a href="" id="list" class="nav-bar__nav-link"> Alta </a>
             </li>
             <li class="nav-bar__nav-item">
-              <a href="/contacto.html" class="nav-bar__nav-link"> Contacto </a>
+              <a href="" id="contact" class="nav-bar__nav-link"> Contacto </a>
             </li>
             <li class="nav-bar__nav-item">
-              <a href="/nosotros.html" class="nav-bar__nav-link"> Nosotros </a>
+              <a href="" id="we" class="nav-bar__nav-link"> Nosotros </a>
             </li>
           </ul>
         </nav>
@@ -33,19 +33,15 @@
         <div class="search-bar">
           <div class="search-bar__logo-container">Logo</div>
           <form action="" class="search-bar__form-container">
-            <label for="busqueda" class="search-bar__form-label">Buscar</label>
-            <input
-              type="search"
-              class="search-bar__form-search"
-              id="busqueda"
-            />
+            <label for="search" class="search-bar__form-label">Buscar</label>
+            <input type="search" class="search-bar__form-search" id="search" />
             <input
               type="submit"
               class="search-bar__form-submit"
-              value="Buscar"
+              value="search"
             />
           </form>
-          <div class="search-bar__carrito-container">C</div>
+          <div class="search-bar__whishList-container">C</div>
           <div class="menu-toggle">
             <label for="menu" class="menu-toggle__label">
               <span class="menu-toggle__top-bread"></span>
@@ -57,7 +53,7 @@
         <!-- search-bar -->
       </header>
       <!-- <header> -->
-      <div class="section-carrotp"></div>
+      <div class="section-whishlist"></div>
       <main></main>
       <footer></footer>
     </section>
@@ -76,13 +72,10 @@
     <script src="js/controllers/products.js"></script>
     <script src="js/controllers/whishlist.js"></script>
     <!-- Menu -->
-    <script src="js/alta.js"></script>
-    <script src="js/nosotros.js"></script>
-    <script src="js/contacto.js"></script>
-    <script src="js/card.js"></script>
-    <!-- productos -->
-    <script src="js/producto.service.js"></script>
-    <script src="js/producto.js"></script>
+    <script src="js/menu/list.js"></script>
+    <script src="js/menu/we.js"></script>
+    <script src="js/menu/contact.js"></script>
+    <script src="js/menu/whishlist.js"></script>
     <!-- codigo de arranque -->
     <script src="js/main.js"></script>
   </body>

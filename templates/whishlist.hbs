@@ -1,7 +1,7 @@
-{{#if carrito.length}}
+{{#if whishList.length}}
   <button
-    class="btn__enviarCarrito"
-    onclick="carritoController.enviarCarrito()"
+    class="btn__sendList"
+    onclick="listController.sendList()"
   >Enviar</button>
   <table>
     <tr>
@@ -14,22 +14,22 @@
       <th>Acción</th>
     </tr>
 
-    {{#each carrito}}
+    {{#each whishList}}
       <tr>
-        <td>{{nombre}}</td>
-        <td>{{precio}}</td>
-        <td>{{marca}}</td>
+        <td>{{name}}</td>
+        <td>{{price}}</td>
+        <td>{{mark}}</td>
         <td>
           <img
             style="display:block; margin: 0 auto;"
-            src="{{imagen}}"
+            src="{{picture}}"
             width="50"
-            alt="{{nombre}}"
+            alt="{{name}}"
           />
         </td>
-        <td>{{cantidad}}</td>
+        <td>{{stock}}</td>
 
-        {{#if envio}}
+        {{#if send}}
           <td>Si</td>
         {{else}}
           <td>No</td>
@@ -37,12 +37,12 @@
 
         <td>
           <button
-            onclick="carritoController.borrarProductoCarrito({{id}})"
-          >borrar</button>
+            onclick="listController.deleteProductList({{id}})"
+          >delete</button>
         </td>
       </tr>
     {{/each}}
   </table>
 {{else}}
-  <h2>El carrito está vacío</h2>
+  <h2>the list is empty</h2>
 {{/if}}

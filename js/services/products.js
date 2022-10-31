@@ -8,12 +8,12 @@ class ProductService extends Http {
 
   async saveProductService() {
     let saveProduct = await http.post(this.URL_PRODUCTS);
-    return saveproduct;
+    return saveProduct;
   }
 
-  async refreshProductService() {
-    let refreshProduct = await http.put(this.URL_PRODUCTS);
-    return refreshProduct;
+  async updateProductService() {
+    let updateProduct = await http.put(this.URL_PRODUCTS);
+    return updateProduct;
   }
 
   async deleteProductService() {

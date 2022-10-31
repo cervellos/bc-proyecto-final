@@ -1,9 +1,9 @@
-{{#if listado.length}}
-  {{#each listado}}
+{{#if list.length}}
+  {{#each list}}
     <a
       href="https://sony.com"
       class="card"
-      onclick="agregarCarrito(event,{{id}},this)"
+      onclick="addwhishList(event,{{id}},this)"
     >
       <article class="card__article">
         <div class="card__image-container">
@@ -12,12 +12,12 @@
         <div class="card__content">
           <h2 class="card__heading">{{nombre}}</h2>
           <div class="card__description">
-            <p>{{detalles}}</p>
+            <p>{{details}}</p>
           </div>
         </div>
       </article>
     </a>
   {{/each}}
 {{else}}
-  <h2>No se encontraron productos</h2>
+  <h2>do not find products</h2>
 {{/if}}
