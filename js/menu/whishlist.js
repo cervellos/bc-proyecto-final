@@ -1,5 +1,3 @@
-let showList = false;
-
 async function renderTableList(list) {
   try {
     const elemSectionList = document.getElementsByClassName("section-list")[0];
@@ -15,6 +13,7 @@ async function renderTableList(list) {
     console.error(error);
   }
 }
+let showList = false;
 
 function initwhishList() {
   console.warn("initwhishList()");

@@ -1,9 +1,9 @@
-class ProductService extends Http {
+class ProductService {
   URL_PRODUCTS = "https://633ccbeff2b0e623dc67cf47.mockapi.io/productos";
 
-  async getProductService() {
-    let product = await http.get(this.URL_PRODUCTS);
-    return product;
+  async getProductsService() {
+    let products = await http.get(this.URL_PRODUCTS);
+    return products;
   }
 
   async saveProductService() {
@@ -21,4 +21,4 @@ class ProductService extends Http {
     return deleteProduct;
   }
 }
-const productosService = new ProductService();
+const productService = new ProductService();

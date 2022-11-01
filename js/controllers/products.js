@@ -15,7 +15,7 @@ class ProductController extends ProductModel {
 
     this.products.push(productSave);
 
-    renderTablaAlta(null, this.products);
+    renderTableList(null, this.products);
   }
 
   async updateProducto(id) {
@@ -24,31 +24,31 @@ class ProductController extends ProductModel {
     const product = formList.readProductsend();
     formList.cleanForm();
 
-    const productoActualizado = await productService.actualizarProductoService(
+    const productUpdate = await productService.updateProductoService(
       id,
       product
     );
-    // console.log(productoActualizado)
+    // console.log(productUpdate)
 
     const index = this.products.findIndex(
-      (product) => product.id == productoActualizado.id
+      (product) => product.id == productUpdate.id
     );
-    this.products.splice(index, 1, productoActualizado);
+    this.products.splice(index, 1, productUpdate);
 
-    renderTablaAlta(null, this.products);
+    renderTableList(null, this.products);
   }
 
-  async borrarProducto(id) {
+  async deleteProduct(id) {
     console.log("borrarProducto", id);
 
-    let productoBorrado = await productService.borrarProductoService(id);
+    let productDelete = await productService.deleteProductService(id);
 
     const index = this.products.findIndex(
-      (product) => product.id == productoBorrado.id
+      (product) => product.id == productDelete.id
     );
     this.products.splice(index, 1);
 
-    renderTablaAlta(null, this.products);
+    renderTableList(null, this.products);
   }
 }
 
