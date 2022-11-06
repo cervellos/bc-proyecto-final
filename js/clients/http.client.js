@@ -2,11 +2,11 @@ class Http {
   /* GET */
   async get(url, id) {
     try {
-      const respuesta = await fetch(url + (id || ""), {
+      const res = await fetch(url + (id || ""), {
         method: "get",
       });
-      const resultado = await respuesta.json();
-      return resultado;
+      const result = await res.json();
+      return result;
     } catch (error) {
       console.error("ERROR GET", error);
     }
@@ -15,15 +15,15 @@ class Http {
   /* POST */
   async post(url, data) {
     try {
-      const respuesta = await fetch(url, {
+      const res = await fetch(url, {
         method: "post",
         body: JSON.stringify(data),
         headers: { "content-type": "application/json" },
       });
 
-      const resultado = await respuesta.json();
+      const result = await res.json();
 
-      return resultado;
+      return result;
     } catch (error) {
       console.error("ERROR POST", error);
     }
@@ -32,15 +32,15 @@ class Http {
   /* PUT */
   async put(url, id, data) {
     try {
-      const respuesta = await fetch(url + id, {
+      const res = await fetch(url + id, {
         method: "put",
         body: JSON.stringify(data),
         headers: { "content-type": "application/json" },
       });
 
-      const resultado = await respuesta.json();
+      const result = await res.json();
 
-      return resultado;
+      return result;
     } catch (error) {
       console.error("ERROR PUT", error);
     }
@@ -49,12 +49,12 @@ class Http {
   /* DELETE */
   async del(url, id) {
     try {
-      const respuesta = await fetch(url + id, {
+      const res = await fetch(url + id, {
         method: "delete",
       });
-      const resultado = await respuesta.json();
+      const result = await res.json();
 
-      return resultado;
+      return result;
     } catch (error) {
       console.error("ERROR DELETE", error);
     }

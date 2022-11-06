@@ -72,7 +72,7 @@ class Main {
       // console.log('Cambió la URL')
 
       let id = location.hash.slice(1) || "init";
-      this.marcarLink(id);
+      this.markLink(id);
       await this.ChargerTemplate(id);
     });
   }

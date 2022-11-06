@@ -40,7 +40,7 @@ class WhishListController extends WhishListModel {
       this.whishList.splice(index, 1);
       localStorage.setItem("whishList", JSON.stringify(this.whishList));
 
-      await renderTablelist(this.whishList);
+      await renderlist(this.whishList);
     } catch (error) {
       console.log(error);
     }
