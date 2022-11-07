@@ -3,22 +3,11 @@ HEADER
 **********/
 .main-header {
   display: flex;
-  flex-direction: column-reverse;
-  background-image: -moz-linear-gradient(
-    --color--secundy-gold,
-    --color--tercear-gold,
-    --color--cuartar-gold,
-    --color--quintar-gold,
-    --color--primary-white,
-    --color--quintar-gold,
-    --color--cuartar-gold,
-    --color--tercear-gold,
-    --color--secunda-gold
-  );
-  color: --color--primary-white;
-
-  width: 100%;
-  position: fixed;
+  flex-direction: column;
+  width: 100vw;
+  height: 5rem;
+  bottom: 0;
+  position: relative;
   /* Medium devices (landscape tablets, 768px and up) */
   @media (min-width: 768px) {
     & {
@@ -58,6 +47,7 @@ HEADER
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
 
     /* Medium devices (landscape tablets, 768px and up) */
     @media (min-width: 768px) {
@@ -120,7 +110,7 @@ HEADER
 /* SEARCH BAR*/
 
 .search-bar {
-  display: flex;
+  display: none;
   justify-content: space-between;
   &__logo-container,
   &__form-container {
@@ -167,10 +157,13 @@ HEADER
 /* MENU TOOGLe*/
 
 .menu-toggle {
-  display: none;
+  display: flex;
   background-color: red;
-  flex: 0 0 3em;
-  position: relative;
+  border-radius: 5px;
+  margin: auto;
+  padding: 50px;
+  position: fixed;
+
   cursor: pointer;
   &__label {
     display: block;
@@ -191,7 +184,7 @@ HEADER
     top: 0.8em;
   }
   &__meat {
-    border: 0.5em #333 solid;
+    border: 0.8em #333 solid;
   }
   &__bottonm-bread {
     bottom: 0.25em;

@@ -9,53 +9,82 @@
   </head>
   <body>
     <section>
-      <header class="main-header">
-        <input type="checkbox" id="menu" />
+      <div  id="wrapper" class="header-wrapped__stick">
+        <header id="header" class="main-header">
+        
+          <input type="checkbox" id="menu" />
 
-        <nav class="nav-bar">
-          <ul class="nav-bar__nav-list">
-            <li class="nav-bar__nav-item">
-              <a href="" id="init" class="nav-bar__nav-link"> Inicio </a>
-            </li>
-            <li class="nav-bar__nav-item">
-              <a href="" id="list" class="nav-bar__nav-link"> Alta </a>
-            </li>
-            <li class="nav-bar__nav-item">
-              <a href="" id="contact" class="nav-bar__nav-link"> Contacto </a>
-            </li>
-            <li class="nav-bar__nav-item">
-              <a href="" id="we" class="nav-bar__nav-link"> Nosotros </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- nav-bar -->
+          <nav class="nav-bar">
+            <ul class="nav-bar__nav-list">
+              <li class="nav-bar__nav-item">
+                <a href="" id="init" class="nav-bar__nav-link"> Inicio </a>
+              </li>
+              <li class="nav-bar__nav-item">
+                <a href="" id="list" class="nav-bar__nav-link"> Alta </a>
+              </li>
+              <li class="nav-bar__nav-item">
+                <a href="" id="contact" class="nav-bar__nav-link"> Contacto </a>
+              </li>
+              <li class="nav-bar__nav-item">
+                <a href="" id="we" class="nav-bar__nav-link"> Nosotros </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- nav-bar -->
 
-        <div class="search-bar">
-          <div class="search-bar__logo-container">Logo</div>
-          <form action="" class="search-bar__form-container">
-            <label for="search" class="search-bar__form-label">Buscar</label>
-            <input type="search" class="search-bar__form-search" id="search" />
-            <input
-              type="submit"
-              class="search-bar__form-submit"
-              value="search"
-            />
-          </form>
-          <div class="search-bar__whishList-container">C</div>
-          <div class="menu-toggle">
-            <label for="menu" class="menu-toggle__label">
+          <div class="search-bar">
+            <div class="search-bar__logo-container">Logo</div>
+            <form action="" class="search-bar__form-container">
+              <label for="search" class="search-bar__form-label">Buscar</label>
+              <input
+                type="search"
+                class="search-bar__form-search"
+                id="search"
+              />
+              <input
+                type="submit"
+                class="search-bar__form-submit"
+                value="search"
+              />
+            </form>
+            <div class="search-bar__whishList-container">C</div>
+            <div class="menu-toggle">
+              
               <span class="menu-toggle__top-bread"></span>
               <span class="menu-toggle__meat"></span>
               <span class="menu-toggle__bottom-bread"></span>
-            </label>
+              
+               </div>
           </div>
-        </div>
-        <!-- search-bar -->
-      </header>
+          <!-- search-bar -->
+          <div class="menu-toggle">
+            <a data-nav-toggle="" href="" class="nav-toggle">
+            <div class="menu-toggle__top-bread"></div>
+            <div class="menu-toggle__meet"></div>
+            <div class="menu-toggle__bottonm-bread"></div>
+            </a>
+          </div>
+          <!-- menu toogle -->
+        </header>
+      </div>
       <!-- <header> -->
       <div class="section-whishList"></div>
       <main></main>
       <footer></footer>
+    </div>
+
+    <nav class="nav-canvas">
+      <div class="nav-canvas__top">
+        <a class="nav-canvas__logo" href="/">ClickUp</a>
+        <span class="nav-canvas__modal">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.292893 0.292901C0.683418 -0.0976231 1.31658 -0.0976231 1.70711 0.292901L17.7071 16.2929C18.0976 16.6834 18.0976 17.3166 17.7071 17.7071C17.3166 18.0976 16.6834 18.0976 16.2929 17.7071L0.292893 1.70711C-0.0976312 1.31659 -0.0976309 0.683425 0.292893 0.292901Z" fill="#7C828D"></path>
+            <path d="M0.292893 17.7071C0.683418 18.0976 1.31658 18.0976 1.70711 17.7071L17.7071 1.70711C18.0976 1.31658 18.0976 0.683417 17.7071 0.292893C17.3166 -0.0976311 16.6834 -0.097631 16.2929 0.292893L0.292893 16.2929C-0.0976312 16.6834 -0.0976309 17.3166 0.292893 17.7071Z" fill="#7C828D"></path></svg>
+            </span>
+            
+         
+            
+  
     </section>
     <!-- Codigo de librerias -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>

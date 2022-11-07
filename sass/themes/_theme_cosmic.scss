@@ -36,6 +36,17 @@ body {
   animation: trasiciones 5s infinite normal;
 }
 
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+main {
+  margin: 5rem;
+  padding-left: 1rem;
+}
+
 @keyframes trasiciones {
   0% {
     background-position: 84% 0%;
