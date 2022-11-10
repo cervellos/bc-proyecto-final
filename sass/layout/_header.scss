@@ -158,11 +158,32 @@ HEADER
 
 .menu-toggle {
   display: flex;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.314);
   border-radius: 5px;
   margin: auto;
   padding: 50px;
   position: fixed;
+  right: -1%;
+  top: 15%;
+  transform: translate(-5%, -50%);
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
+    & {
+      display: flex;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) {
+    & {
+      display: none;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    & {
+      display: none;
+    }
+  }
 
   cursor: pointer;
   &__label {
@@ -184,7 +205,7 @@ HEADER
     top: 0.8em;
   }
   &__meat {
-    border: 0.8em #333 solid;
+    border: 0.8em;
   }
   &__bottonm-bread {
     bottom: 0.25em;
