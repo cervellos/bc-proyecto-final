@@ -158,56 +158,38 @@ HEADER
 
 .menu-toggle {
   display: flex;
-  background-color: rgba(255, 0, 0, 0.314);
-  border-radius: 5px;
+  max-width: 100%;
   margin: auto;
-  padding: 50px;
+  padding: 1px;
   position: fixed;
-  right: -1%;
+  right: 1%;
   top: 15%;
   transform: translate(-5%, -50%);
   /* Medium devices (landscape tablets, 768px and up) */
   @media (min-width: 768px) {
     & {
-      display: flex;
+      display: fixed;
+      right: 0%;
+      top: 5%;
     }
-  }
-  /* Large devices (laptops/desktops, 992px and up) */
-  @media (min-width: 992px) {
-    & {
-      display: none;
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media (min-width: 992px) {
+      & {
+        display: none;
+      }
     }
-  }
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media (min-width: 1200px) {
-    & {
-      display: none;
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      & {
+        display: none;
+      }
     }
-  }
 
-  cursor: pointer;
-  &__label {
-    display: block;
-    background-color: black;
-    height: 100%;
-  }
-  &__top-bread,
-  &__meat,
-  &__bottonm-bread {
-    display: block;
-    background-color: #333;
-    height: 0.2em;
-    position: absolute;
-    left: 0.5em;
-    right: 0.5em;
-  }
-  &__top-bread {
-    top: 0.8em;
-  }
-  &__meat {
-    border: 0.8em;
-  }
-  &__bottonm-bread {
-    bottom: 0.25em;
+    cursor: pointer;
+    &__label {
+      display: block;
+      background-color: black;
+      height: 100%;
+    }
   }
 }
