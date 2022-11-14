@@ -1,9 +1,4 @@
-const btnWarpper = document.getElementById("wrapper");
-btnWarpper.addEventListener("click", (e) => {
-  forEach(e, console.log(e));
-});
 class Main {
-  //Boton toggle
   //AJAX
   async ajax(url, metodo = "get") {
     try {

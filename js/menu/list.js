@@ -13,7 +13,7 @@ class FormList {
     /^.+$/, // regephotooto
   ];
 
-  constructor(renderList, saveProduct) {
+  constructor(renderTableList, saveProduct) {
     // Referencias de las funciones
     this.inputs = document.querySelectorAll("main form input");
     this.form = document.querySelector("main form");
@@ -24,9 +24,12 @@ class FormList {
     this.inputs.forEach((input, index) => {
       if (input.type != "checkbox") {
         input.addEventListener("input", () => {
-          this.validity(input.value, this.regExpValidar[index], index);
-          if (renderList)
-            renderList(!this.someInputsValid(), productController.products);
+          this.validity(input.value, this.regExpValid[index], index);
+          if (renderTableList)
+            renderTableList(
+              !this.someInputsValid(),
+              productController.products
+            );
         });
       }
     });
@@ -108,7 +111,7 @@ class FormList {
 }
 
 // Rendereabamos la plantilla
-const renderList = (valids, products) => {
+const renderTableList = (products, valids) => {
   const xhr = new XMLHttpRequest();
   xhr.open("get", "/templates/list.hbs");
   xhr.addEventListener("load", () => {
@@ -117,7 +120,7 @@ const renderList = (valids, products) => {
 
       let template = Handlebars.compile(templateHbs);
 
-      // console.warn(productos)
+      console.warn(products);
       let html = template({ products, valids });
       document.getElementById("list-products").innerHTML = html;
     }
@@ -134,8 +137,8 @@ let formList = null;
 async function initList() {
   console.warn("initList()");
 
-  formList = new FormList(renderList, productController.saveProduct);
+  formList = new FormList(renderTableList, productController.saveProduct);
 
   const products = await productController.getProducts();
-  renderList(null, products);
+  renderTableList(null, products);
 }

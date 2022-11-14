@@ -15,7 +15,7 @@ class ProductController extends ProductModel {
 
     this.products.push(productSave);
 
-    renderList(null, this.products);
+    renderTableList(null, this.products);
   }
 
   async updateProducto(id) {
@@ -35,7 +35,7 @@ class ProductController extends ProductModel {
     );
     this.products.splice(index, 1, productUpdate);
 
-    renderList(null, this.products);
+    renderTableList(null, this.products);
   }
 
   async deleteProduct(id) {
@@ -48,7 +48,7 @@ class ProductController extends ProductModel {
     );
     this.products.splice(index, 1);
 
-    renderList(null, this.products);
+    renderTableList(null, this.products);
   }
 }
 

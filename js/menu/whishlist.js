@@ -1,5 +1,3 @@
-let showList = false;
-
 async function renderList(list) {
   console.log(list);
   try {
@@ -13,10 +11,11 @@ async function renderList(list) {
 
     elemSectionList.innerHTML = html;
     elemSectionList.classList.add("section-list--visible");
-  } catch (error) {
-    console.error("este error" + error);
+  } catch (err) {
+    console.error("este error" + err);
   }
 }
+let showList = false;
 
 function initWhishList() {
   console.warn("initwhishList()");
