@@ -1,13 +1,17 @@
 /*******************
 HEADER
 **********/
+.header-wrapped__stick {
+  display: flex;
+  position: fixed;
+  margin-top: -5rem;
+}
 .main-header {
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 5rem;
-  bottom: 0;
-  position: relative;
+  position: absolute;
   /* Medium devices (landscape tablets, 768px and up) */
   @media (min-width: 768px) {
     & {
@@ -42,7 +46,6 @@ HEADER
 /* NAV BAR*/
 
 .nav-bar {
-  list-style: none;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -50,8 +53,13 @@ HEADER
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateY(0);
+  &__show {
+    transform: translateY(-100%);
+  }
 
   &__nav-list {
+    list-style: none;
     background-color: #ffd300;
     /* Medium devices (landscape tablets, 768px and up) */
     @media (min-width: 768px) {
@@ -74,10 +82,13 @@ HEADER
   }
   &__nav-item {
     background-color: pink;
+    padding: 1px;
   }
   &__nav-link {
     background-color: purple;
     text-decoration: none;
+    font-size: 50px;
+
     &:hover {
       color: #ffd300;
       background: inherit;
@@ -109,10 +120,9 @@ HEADER
 /* SEARCH BAR*/
 
 .search-bar {
-  display: fixed;
+  display: flex;
   background-color: aqua;
-  margin-top: 20%;
-  flex-direction: row;
+  flex-direction: column;
 
   &__logo-container,
   &__form-container {
@@ -122,16 +132,19 @@ HEADER
     background-color: #ffd300;
     text-indent: -999px;
     background: url("../../img/logo.png");
+    display: flex;
+    position: fixed;
   }
   &__form-container {
     background-color: azure;
     display: flex;
     flex-basis: 100%;
     justify-content: center;
+    width: 23em;
   }
   &__form-label {
     display: none;
-    background-color: bisque;
+    background-color: fdgdfg;
     color: #333;
     opacity: 0.5;
   }
@@ -144,16 +157,16 @@ HEADER
     width: 70%;
   }
   &__form-submit {
-    background-image: -moz-linear-gradient(
-      --color--secundy-blue,
-      --color--primary-blue
-    );
     border-radius: 5px;
+    width: 10em;
   }
   &__whishList-container {
     background-color: #ffd300;
     flex: 0 0 3em;
-    opacity: 1;
+    text-indent: -999px;
+    background: url("../../img/icon-buyingEmpty.png");
+    background-repeat: no-repeat;
+    transform: translate(10%, 10%);
   }
 }
 
@@ -168,6 +181,7 @@ HEADER
   right: 1%;
   top: 15%;
   transform: translate(-5%, -50%);
+
   /* Medium devices (landscape tablets, 768px and up) */
   @media (min-width: 768px) {
     & {
