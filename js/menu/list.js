@@ -111,9 +111,9 @@ class FormList {
 }
 
 // Rendereabamos la plantilla
-const renderTableList = (products, valids) => {
+const renderTableList = (valids, products) => {
   const xhr = new XMLHttpRequest();
-  xhr.open("get", "/templates/list.hbs");
+  xhr.open("get", "templates/list.hbs");
   xhr.addEventListener("load", () => {
     if (xhr.status === 200) {
       let templateHbs = xhr.response;

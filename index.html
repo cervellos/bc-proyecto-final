@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.min.css" />
-    <title>Inicio</title>
+    <title>Astral-Clock</title>
   </head>
   <body>
     
-    <div class="header-wrapped__stick">
+
       <header id="header" class="main-header">
         
           <input type="checkbox" id="menu" />
@@ -30,34 +30,39 @@
               </li>
             </ul>
                       <!-- search-bar -->
-
-          <div class="search-bar">
-            <div class="search-bar__logo-container">Logo</div>
-            <form action="" class="search-bar__form-container">
-              <label for="search" class="search-bar__form-label">Buscar</label>
+                      
+                      <div class="search-bar">
+                  <div class="search-bar__row">
+                          
+             <div class="search-bar__logo-container">Logo</div>
+             <div class="search-bar__whishList-container" id="btn-whisList">C</div>
+                  </div>
+             <form action="" class="search-bar__form-container">
+               <label for="search" class="search-bar__form-label">Buscar</label>
               <input
                 type="search"
                 class="search-bar__form-search"
                 id="search"
               />
               <input
-                type="submit"
-                class="search-bar__form-submit"
-                value="search"
+              type="submit"
+              class="search-bar__form-submit"
+              value="search"
               />
             </form>
-            <div class="search-bar__whishList-container">C</div>
-            
           </div>
+            
+            
+         
           <!-- search-bar -->
-          <div class="menu-toggle">
+          <div class="menu-toggle" id="menu-toggle">
             <img src="img/menu-toogle-icon.png" alt="">
             <a data-nav-toggle="" href="" class="nav-toggle">
             </a>
             </div>
           <!-- menu toogle -->
       </header>
-    </div>
+
 
       <!-- <header> -->
       <div class="section-whishList"></div>

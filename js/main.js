@@ -3,7 +3,6 @@ const iconoMenu = document.getElementById("icono-toggle");
 const navMenu = document.getElementById("wrapper");
 toogleMenuElement.addEventListener("click", () => {
   navMenu.classList.toggle("nav-bar__show");
-  iconoMenu.src = "img/menu-toogle-close.png";
 });
 class Main {
   //AJAX

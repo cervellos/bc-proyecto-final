@@ -1,21 +1,16 @@
 /*******************
 HEADER
 **********/
-.header-wrapped__stick {
-  display: flex;
-  position: fixed;
-  margin-top: -5rem;
-}
 .main-header {
   display: flex;
   flex-direction: column;
+  background-color: var(--color--dark-back);
   width: 100vw;
   height: 5rem;
-  position: absolute;
   /* Medium devices (landscape tablets, 768px and up) */
   @media (min-width: 768px) {
     & {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
   }
   /* Large devices (laptops/desktops, 992px and up) */
@@ -46,10 +41,10 @@ HEADER
 /* NAV BAR*/
 
 .nav-bar {
+  background-color: var(--color--dark-back);
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-  background-color: mediumaquamarine;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,33 +54,15 @@ HEADER
   }
 
   &__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
     list-style: none;
-    background-color: #ffd300;
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media (min-width: 768px) {
-      & {
-        flex-direction: row;
-      }
-    }
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media (min-width: 992px) {
-      & {
-        flex-direction: row;
-      }
-    }
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media (min-width: 1200px) {
-      & {
-        flex-direction: row;
-      }
-    }
   }
   &__nav-item {
-    background-color: pink;
     padding: 1px;
   }
   &__nav-link {
-    background-color: purple;
     text-decoration: none;
     font-size: 50px;
 
@@ -93,6 +70,28 @@ HEADER
       color: #ffd300;
       background: inherit;
       text-decoration: none;
+    }
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
+    &,
+    &__nav-list {
+      flex-direction: column;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) {
+    &,
+    &__nav-list {
+      flex-direction: row;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    &,
+    &__nav-list {
+      flex-direction: row;
     }
   }
   /* Medium devices (landscape tablets, 768px and up) */
@@ -121,38 +120,33 @@ HEADER
 
 .search-bar {
   display: flex;
-  background-color: aqua;
   flex-direction: column;
-
-  &__logo-container,
-  &__form-container {
-    padding: 1em;
+  flex-wrap: wrap;
+  &__row {
+    display: flex;
+    direction: row;
+    flex-wrap: wrap;
+    height: 6rem;
   }
   &__logo-container {
     background-color: #ffd300;
     text-indent: -999px;
     background: url("../../img/logo.png");
-    display: flex;
-    position: fixed;
+    background-repeat: no-repeat;
+    width: 5.9em;
+    max-width: 100%;
+    padding: 0;
   }
   &__form-container {
-    background-color: azure;
     display: flex;
-    flex-basis: 100%;
     justify-content: center;
-    width: 23em;
   }
   &__form-label {
     display: none;
-    background-color: fdgdfg;
     color: #333;
     opacity: 0.5;
   }
   &__form-search {
-    background-image: -moz-linear-gradient(
-      --color--secundy-blue,
-      --color--primary-blue
-    );
     border-radius: 5px;
     width: 70%;
   }
@@ -162,14 +156,30 @@ HEADER
   }
   &__whishList-container {
     background-color: #ffd300;
-    flex: 0 0 3em;
     text-indent: -999px;
     background: url("../../img/icon-buyingEmpty.png");
     background-repeat: no-repeat;
-    transform: translate(10%, 10%);
+    width: 6em;
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media (min-width: 768px) {
+    & {
+      flex-direction: column;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media (min-width: 992px) {
+    & {
+      flex-direction: row;
+    }
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    & {
+      flex-direction: row;
+    }
   }
 }
-
 /* MENU TOOGLe*/
 
 .menu-toggle {
@@ -193,12 +203,16 @@ HEADER
     @media (min-width: 992px) {
       & {
         display: none;
+        right: 0%;
+        top: 5%;
       }
     }
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media (min-width: 1200px) {
       & {
         display: none;
+        right: 1%;
+        top: 50%;
       }
     }
 
