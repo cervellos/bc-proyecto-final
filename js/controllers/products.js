@@ -21,7 +21,7 @@ class ProductController extends ProductModel {
   async updateProducto(id) {
     console.log("actualizarProducto", id);
 
-    const product = formList.readProductsend();
+    const product = formList.readProductSend();
     formList.cleanForm();
 
     const productUpdate = await productService.updateProductoService(

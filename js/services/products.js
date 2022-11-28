@@ -5,18 +5,18 @@ class ProductService {
     return products;
   }
 
-  async saveProductService() {
-    let saveProduct = await http.post(this.URL_PRODUCTS);
+  async saveProductService(product) {
+    let saveProduct = await http.post(this.URL_PRODUCTS, product);
     return saveProduct;
   }
 
   async updateProductService() {
-    let updateProduct = await http.put(this.URL_PRODUCTS);
+    let updateProduct = await http.put(this.URL_PRODUCTS, id, product);
     return updateProduct;
   }
 
   async deleteProductService() {
-    let deleteProduct = await http.del(this.URL_PRODUCTS);
+    let deleteProduct = await http.del(this.URL_PRODUCTS, id);
     return deleteProduct;
   }
 }

@@ -1,8 +1,5 @@
-{{#if whishList.length}}
-  <button
-    class="btn__sendList"
-    onclick="listController.sendList()"
-  >Enviar</button>
+{{#if whishlist.length}}
+  <button class="btn-close" id="btn_closeWhislist">Enviar</button>
   <table>
     <tr>
       <th>Nombre</th>
@@ -14,7 +11,7 @@
       <th>Acción</th>
     </tr>
 
-    {{#each whishList}}
+    {{#each whishlist}}
       <tr>
         <td>{{name}}</td>
         <td>{{price}}</td>

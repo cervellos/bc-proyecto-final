@@ -1,3 +1,5 @@
+let showList = false;
+
 async function renderList(list) {
   console.log(list);
   try {
@@ -15,7 +17,6 @@ async function renderList(list) {
     console.error("este error" + err);
   }
 }
-let showList = false;
 
 function initWhishList() {
   console.warn("initwhishList()");
@@ -37,6 +38,10 @@ function initWhishList() {
     } catch (error) {
       console.error(error);
     }
+    const closeWhislist = document.getElementById("btn_closewhislist");
+    closeWhislist.addEventListener("click", () => {
+      elemSectionList.classList.remove("section-carrito--visible");
+    });
   });
 }
 

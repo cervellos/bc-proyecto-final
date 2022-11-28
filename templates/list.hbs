@@ -14,6 +14,7 @@
         <td>{{name}}</td>
         <td>{{price}}</td>
         <td>{{stock}}</td>
+        <td>{{mark}}</td>
         <td>{{category}}</td>
         <td>{{details}}</td>
         <td>
@@ -24,20 +25,20 @@
             width="50"
           />
         </td>
-        {{#if }}
+        {{#if send}}
           <td>Yes</td>
         {{else}}
           <td>No</td>
         {{/if}}
         <td>
           {{#if ../valids}}
-            <button onclick="updateProducts({{id}})">Update</button>
+            <button onclick="productoController.updateProducts({{id}})">Update</button>
           {{else}}
-            <button disabled onclick="updateProducts({{id}})">Update</button>
+            <button disabled onclick="productoController.updateProducts({{id}})">Update</button>
           {{/if}}
         </td>
         <td>
-            <button onclick="deleteProduct({{id}})">delete</button>
+            <button onclick="productController.deleteProduct({{id}})">delete</button>
         </td>
       </tr>
     {{/each}}
